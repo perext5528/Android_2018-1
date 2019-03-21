@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffe699">
+
+        <!--ivPicture-->
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:id="@+id/ivPicture"
+            android:contentDescription="@string/app_name"/>
+        <!--contentDescription: 안드로이드 접근성 관련 속성, 없어도 무방-->
+
+        <!--GPS 설정 버튼-->
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/gps"
+            android:background="#ffffff"
+            android:paddingLeft="100dp"
+            android:paddingRight="100dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:onClick="mOnGPSClick"
+            style="?android:attr/borderlessButtonStyle"/>
+        <!--style... : 버튼 그림자 없애기-->
+
+        <!--매장 종류 ImageView-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/imgv_res"
+            android:onClick="showMSG"/>
+
+        <!--매장 상세 종류 ImageButton-->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:weightSum="1">
+                <!--weightSum : 가로세로 비율 맞추기-->
+
+                <ImageButton
+                    android:id="@+id/btn_ko"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/imgbtn_kor"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    style="?android:attr/borderlessButtonStyle" />
+
+                <ImageButton
+                    android:id="@+id/btn_jp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/imgbtn_jpn"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+            </TableRow>
+
+            <TableRow
+                android:weightSum="1">
+
+                <ImageButton
+                    android:id="@+id/btn_ch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/imgbtn_chi"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    style="?android:attr/borderlessButtonStyle" />
+
+                <ImageButton
+                    android:id="@+id/btn_west"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/imgbtn_west"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    style="?android:attr/borderlessButtonStyle" />
+
+            </TableRow>
+        </TableLayout>
+
+        <!--매장 종류 ImageView-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/imgv_des"
+            android:onClick="showMSG"/>
+
+        <!--매장 상세 종류 ImageButton-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+            <ImageButton
+                android:id="@+id/btn_cafe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:src="@drawable/imgbtn_cof"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                style="?android:attr/borderlessButtonStyle" />
+
+            <ImageButton
+                android:id="@+id/btn_dessert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:src="@drawable/imgbtn_des"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                style="?android:attr/borderlessButtonStyle" />
+
+        </TableRow>
+
+        <!--매장 종류 ImageView-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/imgv_han"
+            android:onClick="showMSG"/>
+
+        <!--매장 상세 종류 ImageButton-->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:weightSum="1">
+
+                <ImageButton
+                    android:id="@+id/btn_chimac"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/imgbtn_chm"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    style="?android:attr/borderlessButtonStyle" />
+
+                <ImageButton
+                    android:id="@+id/btn_soju"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/imgbtn_soju"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    style="?android:attr/borderlessButtonStyle" />
+
+            </TableRow>
+
+            <TableRow
+                android:weightSum="1">
+
+                <ImageButton
+                    android:id="@+id/btn_pub"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/imgbtn_pub"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    style="?android:attr/borderlessButtonStyle" />
+
+                <ImageButton
+                    android:id="@+id/btn_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/imgbtn_bar"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    style="?android:attr/borderlessButtonStyle" />
+
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>
